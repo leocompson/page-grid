@@ -4,8 +4,8 @@ It renders an adjustable grid on the page (active tab). You can the grid positio
 
 Download links:  
 
-Chrome: https://chrome.google.com/webstore/detail/  
-Edge: https://microsoftedge.microsoft.com/addons/detail/  
+Chrome: https://chrome.google.com/webstore/detail/nnnippacfnenmpahblojiljgoneahkpc    
+Edge: https://microsoftedge.microsoft.com/addons/detail/pnmkpllganbhafgchlcmlgpkombhmphh  
 
 ----------------------------------------
 
