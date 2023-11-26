@@ -7,4 +7,6 @@ Download links:
 Chrome: https://chrome.google.com/webstore/detail/  
 Edge: https://microsoftedge.microsoft.com/addons/detail/  
 
+----------------------------------------
+
 Support & FAQ: https://mybrowseraddon.com/page-grid.html
