@@ -1,0 +1,30 @@
+:root {
+  --grid-x: -1px;
+  --grid-y: -1px;
+  --grid-size: 64px;
+  --line-width: 1px;
+  --line-color: #b7b7b7;
+  --grid-zindex: 2147483644;
+}
+
+.gridmode-container {
+  top: 0 !important;
+  left: 0 !important;
+  border: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  direction: ltr !important;
+  position: fixed !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  pointer-events: none !important;
+  box-sizing: border-box !important;
+  z-Index: var(--grid-zindex) !important;
+  background-color: transparent !important;
+  background-image: linear-gradient(var(--line-color) var(--line-width), transparent 0), linear-gradient(90deg, var(--line-color) var(--line-width), transparent 0);
+  background-size: var(--line-width) var(--grid-size), var(--grid-size) var(--line-width), 0 0, 0 0;
+  background-position: 0 var(--grid-x), var(--grid-y) 0, 0 0, 0 0;
+}
