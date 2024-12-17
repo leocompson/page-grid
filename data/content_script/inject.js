@@ -59,9 +59,9 @@ if (!background) {
         if (!target) {
           config.grid.element.container = document.createElement("div");
           config.grid.element.container.className = "gridmode-container";
+          document.body.appendChild(config.grid.element.container);
           /*  */
           background.send("button", {"icon": "ON"});
-          document.body.appendChild(config.grid.element.container);
           document.addEventListener("keydown", config.grid.keydown);
         }
       },

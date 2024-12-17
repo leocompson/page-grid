@@ -40,7 +40,7 @@ table tr td label {
 }
 
 table tr td:has(label) {
-  width: 150px;
+  width: 200px;
   text-align: left;
 }
 
