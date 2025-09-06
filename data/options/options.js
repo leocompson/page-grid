@@ -36,6 +36,7 @@ var config = {
     const x = document.getElementById("position-x");
     const y = document.getElementById("position-y");
     const zindex = document.getElementById("zindex");
+    const theme = e.theme !== undefined ? e.theme : "light";
     /*  */
     x.value = e.x;
     y.value = e.y;
@@ -43,14 +44,23 @@ var config = {
     width.value = e.width;
     color.value = e.color;
     zindex.value = e.zindex;
+    document.documentElement.setAttribute("theme", theme);
   },
   "load": function () {
     const size = document.getElementById("size");
     const width = document.getElementById("width");
     const color = document.getElementById("color");
+    const theme = document.getElementById("theme");
     const x = document.getElementById("position-x");
     const y = document.getElementById("position-y");
     const zindex = document.getElementById("zindex");
+    const reload = document.getElementById("reload");
+    const support = document.getElementById("support");
+    const donation = document.getElementById("donation");
+    /*  */
+    reload.addEventListener("click", function () {document.location.reload()});
+    support.addEventListener("click", function () {background.send("support")});
+    donation.addEventListener("click", function () {background.send("donation")});
     /*  */
     color.addEventListener("input", function (e) {
       background.send("color", e.target.value);
@@ -81,9 +91,18 @@ var config = {
       background.send("position-y", value);
     });
     /*  */
+    theme.addEventListener("click", function () {
+      let attribute = document.documentElement.getAttribute("theme");
+      attribute = attribute === "dark" ? "light" : "dark";
+      /*  */
+      document.documentElement.setAttribute("theme", attribute);
+      background.send("theme", attribute);
+    });
+    /*  */
     background.send("load");
   }
 };
 
 background.receive("storage", config.render);
+
 window.addEventListener("load", config.load, false);
